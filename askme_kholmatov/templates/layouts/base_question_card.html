@@ -1,0 +1,27 @@
+{% load static %}
+<div class="card mb-2 mt-1">
+    <div class="row g-0">
+        
+        <div class="col-3 d-flex flex-column align-items-center p-2">
+            <img src="{% static 'img/freak.jpg' %}" class="card-img mb-2 w-75" alt="Avatar">
+            <input class="form-control w-75" type="number" value="5" ></input>
+        </div>
+        <div class="col-9 p-2">
+            <h5>
+                <a class="card-title" href="{% url 'question' id=question.id %}">{{ question.title }}</a>
+            </h5>
+            <p class="card-text">{{ question.text }}</p>
+            <div class="d-flex">
+                <div class="align-self-end">
+                    Tags:
+
+                      <a href="#" class="card-link">Another link</a>
+                      <a href="#" class="card-link">Another link</a>
+                      <a href="#" class="card-link">Another link</a>
+                      <a href="#" class="card-link">Another link</a>
+                </div>
+            </div> 
+        </div>
+        
+    </div>
+</div>
