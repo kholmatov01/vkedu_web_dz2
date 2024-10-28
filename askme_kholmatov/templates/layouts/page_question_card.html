@@ -11,14 +11,9 @@
                 <h3 class="card-title">{{ question.title }}</h3>
                 <p class="card-text">{{ question.text }} </p>
                 <div class="d-flex">
-                    <div class="align-self-end">
-                        Tags:
-
-                          <a href="#" class="card-link">Another link</a>
-                          <a href="#" class="card-link">Another link</a>
-                          <a href="#" class="card-link">Another link</a>
-                          <a href="#" class="card-link">Another link</a>
-                    </div>
+                    {% for tag in question.tags %}
+                      <a href="{% url 'tag' question_tag=tag %}" class="card-link">{{tag}}</a>
+                    {% endfor %}
                 </div>
         </div>
 

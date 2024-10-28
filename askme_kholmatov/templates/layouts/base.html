@@ -31,7 +31,7 @@
                           dr pepper
                       </div>
                       <a href="#">settings</a>
-                      <a href="#">log out</a>
+                      <a href="{% url 'login' %}">log out</a>
                   </div>
               </div>
           </div>
@@ -48,31 +48,9 @@
             {% endblock %}
         </div>
           <div class="col-3">
-              <section class="mb-3">
-                  <h2>Popular Tags</h2>
-                  <div>
-                      <a href="#" class="m-1">bender</a>
-                      <a href="#" class="m-1">vasya</a>
-                      <a href="#" class="m-1">bamonka</a>
-                      <a href="#" class="m-1">safsa</a>
-                      <a href="#" class="m-1">gosuslugi</a>
-                  </div>
-              </section>
-
-              <section>
-                  <h2>Best members</h2>
-                  <div>
-                      <ul class="list-group list-group-flush">
-                          <li class="list-group-item"><a href="#">Member</a></li>
-                          <li class="list-group-item"><a href="#">Member</a></li>
-                          <li class="list-group-item"><a href="#">Member</a></li>
-                          <li class="list-group-item"><a href="#">Member</a></li>
-                          <li class="list-group-item"><a href="#">Member</a></li>
-                      </ul>
-                  </div>
-              </section>
-
-          </div>
+              {% block right_section %}
+              {% endblock %}
+            </div>
 
       </div>
 
